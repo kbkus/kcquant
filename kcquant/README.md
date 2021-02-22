@@ -9,4 +9,4 @@ To install this package, use
 pip install kcquant
 ```
 
-![image](../Images/get_colors.png).
+![image](https://raw.githubusercontent.com/kbkus/kcquant/main/kcquant/Images/get_colors.png?token=AME4SBXQAWML7AMDXM34FMDAGRBT2)
