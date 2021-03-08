@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kcquant"
-version = "0.1.3"
+version = "0.1.4"
 description = "Color quantization toolkit for exploratory data analysis of images."
 authors = ["kbkus <kacikus@gmail.com>"]
 repository = 'https://github.com/kbkus/kcquant'

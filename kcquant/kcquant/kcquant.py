@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import time
 
-def get_colors(img, figsize=(15,5), columns=5, color='BGR', limit=0, top=None):
+def get_colors(img, figsize=(15,5), columns=5, color='BGR', top=10):
     ''' Input an image in the format of a np.array and return
     subplots of each pixel color plotted with the RGB color value and number
     of pixels in the image that are that color.'''
@@ -32,7 +32,6 @@ def get_colors(img, figsize=(15,5), columns=5, color='BGR', limit=0, top=None):
             rows = int(len(data) // columns)
     else:
         # assign the number of plots to make to be equal to top
-        num_plots = top
         if top % columns != 0:
             rows = int(int(top // columns) + 1)
         else:
@@ -50,7 +49,7 @@ def get_colors(img, figsize=(15,5), columns=5, color='BGR', limit=0, top=None):
             # turn off axes since it is 1 px by 1 px
             plt.axis('off')
             # calculate percentage of image that each pixel color makes up
-            prc = round((data[i][1]/len(img))*100,2)
+            prc = round((data[(row*columns)+i][1]/len(img))*100,2)
             if color == 'BGR':
                 
                 plt.title(f'RGB: {data[(row*columns)+i][0][::-1]}\nTotal num pixels: {data[(row*columns)+i][1]}\n{prc}% of total pixels')
