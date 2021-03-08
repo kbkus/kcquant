@@ -21,8 +21,12 @@ img = Image.open(<file path>).convert('RGB')
 # call get_colors()
 # if image is in RGB set color='RGB'
 # if image is in BGR set color='BGR'
-get_colors(np.array(img), color = 'RGB', top=*n*)
+# n=5 will display top 5 pixel colors in image
+# n=10 will display top 10 pixel colors in image
+n=10
+get_colors(np.array(img), color = 'RGB', top=n)
 
 ```
 
-![image](https://raw.githubusercontent.com/kbkus/kcquant/main/kcquant/Images/get_colors.png?token=AME4SBXQAWML7AMDXM34FMDAGRBT2)
+![image](https://github.com/kbkus/kcquant/blob/main/kcquant/Images/get_colors.png?raw=true)
+
